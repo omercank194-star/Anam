@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Canım Annem 🌸</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff8f4;
+    color:#59484b;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* -------------------- ARKA PLAN -------------------- */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#ffdce8;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.35;
+    top:-200px;
+    left:-200px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#e4f4d8;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.35;
+    right:-200px;
+    bottom:-150px;
+    z-index:-2;
+}
+
+/* -------------------- UÇUŞAN ÇİÇEKLER -------------------- */
+
+.flower,
+.butterfly,
+.sparkle{
+    position:fixed;
+    pointer-events:none;
+    z-index:0;
+}
+
+.flower{
+    bottom:-50px;
+    font-size:25px;
+    opacity:.55;
+    animation:flowerFloat 13s linear infinite;
+}
+
+.flower:nth-child(1){left:8%;animation-delay:0s}
+.flower:nth-child(2){left:22%;animation-delay:4s;font-size:18px}
+.flower:nth-child(3){left:42%;animation-delay:7s}
+.flower:nth-child(4){left:67%;animation-delay:2s;font-size:20px}
+.flower:nth-child(5){left:87%;animation-delay:6s}
+
+@keyframes flowerFloat{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    15%{opacity:.6}
+    100%{
+        transform:translateY(-115vh) rotate(300deg);
+        opacity:0;
+    }
+}
+
+/* -------------------- KELEBEKLER -------------------- */
+
+.butterfly{
+    font-size:25px;
+    opacity:.55;
+    animation:butterflyMove 16s ease-in-out infinite;
+}
+
+.butterfly:nth-child(6){
+    top:20%;
+    left:-40px;
+}
+
+.butterfly:nth-child(7){
+    top:65%;
+    right:-40px;
+    animation-delay:6s;
+}
+
+@keyframes butterflyMove{
+    0%{transform:translateX(0) translateY(0) rotate(-10deg)}
+    50%{transform:translateX(50vw) translateY(-80px) rotate(15deg)}
+    100%{transform:translateX(105vw) translateY(30px) rotate(-10deg)}
+}
+
+/* -------------------- PARILTILAR -------------------- */
+
+.sparkle{
+    color:#e5a3b7;
+    font-size:18px;
+    animation:sparkle 2s ease-in-out infinite;
+}
+
+.s1{top:15%;left:15%}
+.s2{top:30%;right:17%;animation-delay:.7s}
+.s3{top:70%;left:12%;animation-delay:1.2s}
+.s4{top:80%;right:13%;animation-delay:1.8s}
+
+@keyframes sparkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
+
+/* -------------------- HERO -------------------- */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 25px;
+    position:relative;
+    z-index:1;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.small{
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#c9869c;
+    margin-bottom:22px;
+}
+
+h1{
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(70px,13vw,145px);
+    line-height:.9;
+    color:#a65b73;
+    margin-bottom:35px;
+    text-shadow:0 8px 30px rgba(160,80,110,.12);
+}
+
+.hero-text{
+    font-size:19px;
+    line-height:2;
+    color:#715d62;
+    max-width:680px;
+    margin:auto;
+}
+
+.hero-flower{
+    font-size:55px;
+    margin-bottom:25px;
+    animation:sway 3s ease-in-out infinite;
+}
+
+@keyframes sway{
+    0%,100%{transform:rotate(-5deg)}
+    50%{transform:rotate(5deg)}
+}
+
+.scroll{
+    display:inline-block;
+    margin-top:50px;
+    padding:14px 27px;
+    border:1px solid #e3b3c1;
+    border-radius:50px;
+    color:#ad637b;
+    text-decoration:none;
+    transition:.3s;
+    background:rgba(255,255,255,.55);
+}
+
+.scroll:hover{
+    background:#fff;
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(150,80,100,.12);
+}
+
+/* -------------------- BÖLÜMLER -------------------- */
+
+section{
+    padding:115px 25px;
+    position:relative;
+    z-index:1;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+}
+
+.title{
+    font-family:'DM Serif Display',serif;
+    font-size:52px;
+    color:#a65b73;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    color:#78666a;
+}
+
+/* -------------------- FOTOĞRAFLAR -------------------- */
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:65px;
+}
+
+.photo{
+    background:#fff;
+    padding:14px;
+    border-radius:22px;
+    box-shadow:0 20px 50px rgba(110,70,80,.12);
+    transition:.5s;
+    position:relative;
+}
+
+.photo:nth-child(1){transform:rotate(-2deg)}
+.photo:nth-child(2){transform:rotate(2deg)}
+.photo:nth-child(3){transform:rotate(1deg)}
+.photo:nth-child(4){transform:rotate(-1.5deg)}
+.photo:nth-child(5){
+    transform:rotate(1deg);
+    grid-column:span 2;
+    max-width:600px;
+    width:100%;
+    margin:auto;
+}
+
+.photo:hover{
+    transform:rotate(0deg) translateY(-8px) scale(1.02);
+}
+
+.photo::before{
+    content:"🌸";
+    position:absolute;
+    top:-18px;
+    left:-13px;
+    font-size:30px;
+    z-index:2;
+}
+
+.photo::after{
+    content:"♡";
+    position:absolute;
+    bottom:-18px;
+    right:-10px;
+    font-size:30px;
+    color:#d889a2;
+    z-index:2;
+}
+
+.photo img{
+    width:100%;
+    height:360px;
+    object-fit:contain;
+    background:#fffaf9;
+    border-radius:15px;
+    display:block;
+}
+
+.photo:nth-child(5) img{
+    height:430px;
+}
+
+.photo p{
+    text-align:center;
+    padding:18px 10px 10px;
+    font-family:'DM Serif Display',serif;
+    font-size:21px;
+    line-height:1.4;
+    color:#85596a;
+}
+
+/* -------------------- KÜÇÜK MESAJ -------------------- */
+
+.quote-section{
+    text-align:center;
+    padding:100px 25px;
+}
+
+.quote{
+    max-width:800px;
+    margin:auto;
+    font-family:'DM Serif Display',serif;
+    font-size:42px;
+    line-height:1.4;
+    color:#a65b73;
+}
+
+.quote span{
+    color:#d58aa1;
+}
+
+/* -------------------- MEKTUP -------------------- */
+
+.letter-section{
+    background:rgba(255,255,255,.65);
+}
+
+.letter{
+    max-width:780px;
+    margin:55px auto 0;
+    background:#fffdfa;
+    padding:60px;
+    border-radius:28px;
+    box-shadow:0 25px 70px rgba(100,60,70,.10);
+    position:relative;
+    border:1px solid #f4dce3;
+}
+
+.letter::before{
+    content:"🌷";
+    position:absolute;
+    top:-28px;
+    left:30px;
+    font-size:45px;
+}
+
+.letter::after{
+    content:"🌷";
+    position:absolute;
+    bottom:-25px;
+    right:30px;
+    font-size:42px;
+}
+
+.hello{
+    font-family:'DM Serif Display',serif;
+    font-size:40px;
+    color:#a65b73;
+    margin-bottom:30px;
+}
+
+.letter p{
+    font-size:17px;
+    line-height:2;
+    margin-bottom:23px;
+    color:#66575a;
+}
+
+/* -------------------- KARTLAR -------------------- */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:60px;
+}
+
+.card{
+    background:#fff;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(100,60,70,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card-icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    color:#a65b73;
+    margin-bottom:12px;
+    font-family:'DM Serif Display',serif;
+    font-size:25px;
+}
+
+.card p{
+    font-size:14px;
+    line-height:1.8;
+    color:#79676c;
+}
+
+/* -------------------- TARTIŞMALAR -------------------- */
+
+.real-section{
+    text-align:center;
+}
+
+.real-box{
+    max-width:750px;
+    margin:50px auto 0;
+    padding:45px;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 15px 45px rgba(100,60,70,.08);
+}
+
+.real-box p{
+    font-family:'DM Serif Display',serif;
+    font-size:27px;
+    line-height:1.6;
+    color:#8e5c6c;
+}
+
+/* -------------------- FINAL -------------------- */
+
+.final{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.final-box{
+    max-width:800px;
+}
+
+.final h2{
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(55px,9vw,100px);
+    color:#a65b73;
+    line-height:1;
+    margin-bottom:35px;
+}
+
+.final p{
+    font-size:18px;
+    line-height:2;
+    color:#705d62;
+}
+
+.big-heart{
+    font-size:75px;
+    margin:35px 0;
+    animation:heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.18)}
+}
+
+button{
+    margin-top:35px;
+    border:none;
+    background:#ad637b;
+    color:white;
+    padding:17px 38px;
+    border-radius:50px;
+    font-family:inherit;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(160,80,105,.2);
+}
+
+button:hover{
+    transform:scale(1.07);
+    background:#955169;
+}
+
+#message{
+    display:none;
+    margin-top:30px;
+    font-family:'DM Serif Display',serif;
+    font-size:32px;
+    color:#a65b73;
+    animation:appear .7s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* -------------------- MOBİL -------------------- */
+
+@media(max-width:700px){
+
+    section{
+        padding:85px 18px;
+    }
+
+    .photos{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .photo:nth-child(5){
+        grid-column:span 1;
+    }
+
+    .photo img{
+        height:380px;
+    }
+
+    .photo:nth-child(5) img{
+        height:400px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .letter{
+        padding:35px 25px;
+    }
+
+    .quote{
+        font-size:31px;
+    }
+
+    .title{
+        font-size:42px;
+    }
+
+    .letter p{
+        font-size:16px;
+    }
+
+    .real-box{
+        padding:30px 22px;
+    }
+
+    .real-box p{
+        font-size:23px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- UÇUŞAN ÇİÇEKLER -->
+<div class="flower">🌸</div>
+<div class="flower">🌼</div>
+<div class="flower">🌷</div>
+<div class="flower">🌸</div>
+<div class="flower">🌼</div>
+
+<!-- KELEBEKLER -->
+<div class="butterfly">🦋</div>
+<div class="butterfly">🦋</div>
+
+<!-- PARILTILAR -->
+<div class="sparkle s1">✦</div>
+<div class="sparkle s2">✧</div>
+<div class="sparkle s3">✦</div>
+<div class="sparkle s4">✧</div>
+
+
+<!-- ==================== GİRİŞ ==================== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-flower">🌷</div>
+
+<div class="small">
+sana küçük bir şey hazırladım
+</div>
+
+<h1>Canım<br>Annem.</h1>
+
+<p class="hero-text">
+Bazı insanlar hayatımıza sonradan girer.<br>
+Bazı insanlar ise hayatımızın kendisi olur.
+<br><br>
+Ben daha hiçbir şey bilmiyorken yanımda olan,
+büyürken elimden tutan,
+bugün de ne olursa olsun yanımda olan kadın için...
+</p>
+
+<a href="#photos" class="scroll">
+hikâyemize bak ♡
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ==================== FOTOĞRAFLAR ==================== -->
+
+<section id="photos">
+
+<div class="container">
+
+<div class="title">
+Bizim hikâyemiz 🌸
+</div>
+
+<div class="subtitle">
+Yıllar değişti, ben büyüdüm, hayat birçok şeyi değiştirdi.
+Ama bazı şeyler hiç değişmedi.
+Senin benim annem olman gibi.
+</div>
+
+
+<div class="photos">
+
+<div class="photo">
+
+<img src="foto1.jpeg">
+
+<p>
+“Daha hiçbir şeyden haberim yokken bile,
+yanımda sen vardın.
+Hayatımın ilk güvenli yeri senin kollarındı.”
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto2.jpeg">
+
+<p>
+“Belki sıradan bir gündü,
+belki sadece birlikte mutfaktaydık.
+Ama yıllar sonra dönüp baktığımda,
+en güzel anların böyle küçük şeyler olduğunu anlıyorum.”
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto3.jpeg">
+
+<p>
+“Büyüdüm ama senin yanında
+hâlâ aynı çocuğum.
+Birlikte güldüğümüz o saçma anların
+yeri bende hep ayrı.”
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto4.jpeg">
+
+<p>
+“Hayatın en güzel taraflarından biri de
+seninle hiçbir şeyi fazla ciddiye almadan
+gülebilmek.
+İyi ki böyle bir annem var.”
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto5.jpeg">
+
+<p>
+“Yıllar geçti, ben büyüdüm,
+hayat değişti.
+Ama değişmeyen bir şey var:
+Ne olursa olsun sen hâlâ benim annemsin.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== ARA MESAJ ==================== -->
+
+<section class="quote-section">
+
+<div class="quote">
+
+“Ben büyüdükçe,
+senin benim için yaptığın şeylerin
+değerini daha iyi anlıyorum.”
+
+<br>
+
+<span>İyi ki annemsin. ♡</span>
+
+</div>
+
+</section>
+
+
+<!-- ==================== MEKTUP ==================== -->
+
+<section class="letter-section">
+
+<div class="container">
+
+<div class="title">
+Sana söylemek istediklerim 💌
+</div>
+
+<div class="subtitle">
+Bazı şeyleri yüz yüze söylemek zor oluyor.
+O yüzden bu sefer hepsini buraya bırakıyorum.
+</div>
+
+
+<div class="letter">
+
+<div class="hello">
+Canım Annem,
+</div>
+
+<p>
+Ben daha çok küçükken hayatımızda birçok şey değişti.
+Ama değişmeyen bir şey vardı:
+Senin benim yanımda oluşun.
+</p>
+
+<p>
+Büyürken her zaman her şeyi anlamadım.
+Bazen yaptıklarının değerini fark etmedim,
+bazen seni anlamadım,
+hatta bazen seni üzdüm.
+</p>
+
+<p>
+Şimdi geriye dönüp baktığımda ise
+çocukluğumdan bugüne kadar
+hayatımın her döneminde seni görüyorum.
+Bir şekilde hep yanımdaydın.
+</p>
+
+<p>
+Evet, bazen çok tartışıyoruz.
+Bazen birbirimize kızıyoruz,
+bazen birbirimizi anlamadığımız oluyor.
+Ama ne kadar kızsak da
+bir şekilde yine konuşuyor,
+yine anlaşıyor ve yolumuza devam ediyoruz.
+</p>
+
+<p>
+Çünkü bizim aramızdaki bağ
+birkaç tartışmayla bitecek kadar küçük değil.
+</p>
+
+<p>
+Belki sana her zaman söylemiyorum
+ama seni gerçekten çok seviyorum.
+Benim için yaptığın şeylerin,
+verdiğin emeğin ve sevgisinin
+değerini her geçen gün biraz daha anlıyorum.
+</p>
+
+<p>
+Benim için sadece annem değilsin.
+Çocukluğumun en güzel anılarından,
+bugünümün en önemli insanlarından
+ve hayatım boyunca arkamı yaslayabileceğim
+en değerli insanlardan birisin.
+</p>
+
+<p>
+İyi ki benim annemsin.
+İyi ki varsın.
+</p>
+
+<p style="text-align:right;">
+Seni çok seven,<br>
+Oğlun Ömercan ❤️
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== KÜÇÜK KARTLAR ==================== -->
+
+<section>
+
+<div class="container">
+
+<div class="title">
+Sana birkaç küçük şey 🌷
+</div>
+
+<div class="subtitle">
+Bazen kocaman cümlelere gerek yok.
+Bazı şeyler birkaç kelimeyle de anlatılabilir.
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">🌸</div>
+
+<h3>İyi ki varsın</h3>
+
+<p>
+Hayatımda olman,
+sahip olduğum en güzel şeylerden biri.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🦋</div>
+
+<h3>İyi ki annemsin</h3>
+
+<p>
+Dünyada başka hiçbir insanın
+yerini dolduramayacağı birisin.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🌷</div>
+
+<h3>Hep yanımdasın</h3>
+
+<p>
+Ne kadar büyürsem büyüyeyim,
+senin yanında hep senin çocuğunum.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== GERÇEK HAYAT ==================== -->
+
+<section class="real-section">
+
+<div class="container">
+
+<div class="title">
+Biz biraz böyleyiz. ♡
+</div>
+
+<div class="real-box">
+
+<p>
+“Bazen tartışırız.<br>
+Bazen birbirimize kızarız.<br>
+Ama sonra yine konuşur,<br>
+yine güleriz.<br><br>
+
+Çünkü ne olursa olsun<br>
+biz yine biziz.”
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==================== FİNAL ==================== -->
+
+<section class="final">
+
+<div class="final-box">
+
+<div class="small">
+son bir şey
+</div>
+
+<h2>
+İyi ki<br>
+benim annemsin.
+</h2>
+
+<div class="big-heart">
+❤️
+</div>
+
+<p>
+Ben büyüdüm, yıllar geçti,
+hayat değişti.
+<br><br>
+
+Ama çocukluğumdaki o küçük çocuk
+hâlâ seni görünce aynı şeyi hissediyor:
+<br><br>
+
+<strong>
+“İyi ki benim annem.” 
+</strong>
+</p>
+
+<button onclick="showMessage()">
+Bir şeye bas bakalım 🌸
+</button>
+
+<div id="message">
+Seni çok seviyorum anne. ❤️
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+function showMessage(){
+
+    const message = document.getElementById("message");
+
+    message.style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
